@@ -1,23 +1,16 @@
 <?php
-	if (isset($_SESSION['sessao'])) {
-?><header class="header">
-		<img src="#" alt="logo">
-		<ul>
-			<li><a href="#">Política de Privacidade</a></li>
-			<li><a href="#">Faça login</a></li>
-			<li><a href="#">Vamos rir um pouco?</a></li>
-		</ul>
-	</header>
-	<container class="content">
-		<img src="#" alt="Foto de perfil" class="perfil">
-		<img src="#" alt="foto de capa" class="capa">
-		<ul class="amigos"></ul>
-	</container>
-<?php  
+session_start();
+if (isset($_SESSION['usuario'])) {
+
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+		session_unset();
+		session_destroy();
+		header("Location: index.php");
 	}
-	else{
-		
-	}
+
+}else{
+	header("Location: index.php");
+} 
 
 ?>
 <!DOCTYPE html>
@@ -26,6 +19,11 @@
 	<title>Wobble</title>
 </head>
 <body>
-
+<?php if (isset($_SESSION['usuario'])){ ?>
+	<p>Bem vindo</p>
+	<form action="#" method="post">
+		<input type="Submit" value="Encerrar Sessão">
+	</form>
+<?php } ?>
 </body>
 </html>
