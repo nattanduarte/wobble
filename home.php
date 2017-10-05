@@ -21,22 +21,21 @@ if (isset($_SESSION['usuario'])) {
 <html>
 <head>
 	<title>Wobble</title>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="./css/clear.css">
+	<link rel="stylesheet" type="text/css" href="./css/home.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 </head>
 <body>
 <?php if (isset($_SESSION['usuario'])){ ?>
-	<p>Bem vindo</p>
 	<form action="#" method="post">
 		<input type="Submit" value="Encerrar Sessão">
 	</form>
 <?php 
-	echo "<img id='capa' src='$background' alt='Cover'>";
-	echo "<img id='perfil' src='$imagem' alt='Cover'>";
+	echo "<img class='capa' src='$background' alt='Cover'>";
+	echo "<img class='perfil' src='$imagem' alt='Cover'>";
 } 
-
-
 ?>
-
-	
-
+	<p>Bem vindo, <?php echo $user; ?>!</>
 </body>
 </html>

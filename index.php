@@ -70,14 +70,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		<nav class="menu">
 			<ul>
 				<li><a class="link" href="#">Política de Privacidade</a></li>
-				<li><a class="link" href="#">Vamos rir um pouco?</a></li>
+				<li><a class="link" href="http://samemes.com.br/">Vamos rir um pouco?</a></li>
 			</ul>
 		</nav>	
 	</header>
 	<container class="principal">
 		<section class="presentation">
 			<h1>Bem vindo ao Wobble</h1>
-			<p>Essa rede social foi desenvolvida sob encomenda para você, usuário, que quer ter uma foto de perfil e uma de capa, adicionar uns amigos e tal!!</p>
+			<p>Essa rede social foi desenvolvida sob encomenda para você, usuário, que quer ter uma foto de perfil e uma de capa e nada mais!! A primeira rede social que não tem amigos está no ar.<br/>Oba? Não! Wobble!</p>
 		</section>
 		<container class="content">
 			<form class="form" action="#" method="post">
