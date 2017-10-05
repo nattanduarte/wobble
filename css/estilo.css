@@ -1,0 +1,32 @@
+body{
+	background-color: #FF6600;
+}
+.header{
+	background-color: #FFF;
+}
+.menu a{
+	color: #FF6600;
+}
+.logo{
+	font-family: 'Audiowide', cursive;
+	color:#FF6600;
+	font-size: 3em;
+}
+.principal{
+	color: #FFF;
+	font-family: 'Dosis', sans-serif;
+}
+.content{
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 5px 5px 70px #000;
+	color: #FF6600;
+	font-family: 'Dosis', sans-serif;
+}
+.content a{
+	color: #FF6600;
+	font-family: 'Dosis', sans-serif;
+}
+.form{
+	font-family: 'Dosis', sans-serif;
+}

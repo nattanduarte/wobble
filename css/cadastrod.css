@@ -1,0 +1,50 @@
+p{
+	text-align: justify;
+}
+.logo{
+	padding-left: 40px;
+}
+.header{
+	display: flex;
+
+}
+.menu{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+
+}
+.menu ul{
+	list-style: none;
+	display: flex;
+	margin:0;
+	padding:0;
+}
+.menu li{
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+.content{
+	display: flex;	
+	text-align: center;
+	margin-top: 1vw;
+	height: 70vh;
+
+}
+.formu{
+	margin-top: 1vw;
+	width: 100%;
+}
+.formu input{
+	width: 10vw;
+	height: 1.5vw;
+	border:none;
+	text-align: center;
+	border-bottom: 1px solid #FF6600;
+	margin-bottom: 5px;
+}
+.formu input:last-child{
+	margin-top: 10px;
+	height: 2vw;
+}

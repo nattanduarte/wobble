@@ -1,0 +1,61 @@
+p{
+	text-align: justify;
+}
+.logo{
+	padding-left: 40px;
+}
+.header{
+	display: flex;
+
+}
+.menu{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+
+}
+.menu ul{
+	list-style: none;
+	display: flex;
+	margin:0;
+	padding:0;
+}
+.menu li{
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+.presentation{
+	flex: 0.5;
+
+}
+.content{
+	display: flex;	
+	flex:0.4;
+	flex-direction: column;
+	text-align: center;
+	margin-top: 10px;
+	height: 70vh;
+
+}
+.content p{
+	text-align: right;
+	margin-right: 10px;
+}
+.principal{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.form{
+	width: 100%;
+}
+.form input{
+	display: flex;
+	margin-left: 2vw;
+	width: 35vw;
+	height: 7vh;
+	border-style: none;
+	border:none;
+	text-align: center;
+}
