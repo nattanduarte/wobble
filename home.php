@@ -1,6 +1,8 @@
 <?php
 session_start();
+
 if (isset($_SESSION['usuario'])) {
+$conexao = mysqli_connect("localhost", "root", "","usuarios");
 
 	$user = $_SESSION['usuario'];
 	$background = "./usuarios/" . $user . "/background.jpg";
@@ -15,6 +17,35 @@ if (isset($_SESSION['usuario'])) {
 }else{
 	header("Location: index.php");
 } 
+$nome="";
+$sobrenome="";
+
+$query="SELECT * FROM cadastros";	
+	if ($resposta=mysqli_query($conexao,$query)){
+
+
+		foreach ($resposta as $linha){
+			$nomeSelect=$linha['Nome'];
+			$sobrenomeSelect=$linha['Sobrenome'];
+			$sexoSelect = $linha['Sexo'];
+			$emailSelect = $linha['Email'];
+			$usernameSelect = $linha['Usuario'];
+			$passwordSelect = $linha['Senha'];
+
+			if ($user == $usernameSelect) {
+				$nome=$nomeSelect;
+				$sobrenome=$sobrenomeSelect;
+			}
+			
+		}
+			mysqli_free_result($resposta);
+
+	}else{
+		echo "Erro na query:<br>$query<br>Listando erros ... <br>";
+		echo "<pre>";
+		print_r(mysqli_error_list($conexao));
+		echo "</pre>";
+	}
 
 ?>
 <!DOCTYPE html>
@@ -36,6 +67,6 @@ if (isset($_SESSION['usuario'])) {
 	echo "<img class='perfil' src='$imagem' alt='Cover'>";
 } 
 ?>
-	<p>Bem vindo, <?php echo $user; ?>!</>
+	<p>Bem vindo, <?php echo "$nome $sobrenome"; ?>!<p/>
 </body>
 </html>
